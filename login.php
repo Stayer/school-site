@@ -1,23 +1,18 @@
-    <td id="news" align="left" valign="top" rowspan="2">
-
-
-  <table width="640" cellpadding="0" cellspacing="0">
-  
-
-
-  <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title"><img src="templates/<?echo $site_template ?>/images/strel.jpg" alt="" />
-  &nbsp; ¬ход в личный кабинет </td><td align="right" class="date">09.11.2010</td></tr>
-  <tr><td colspan="2" class="newsborder"></td></tr>
-  <tr><td colspan="2" class="newstop"></td></tr>
-  <tr><td class="text" colspan="2">
-	<p></p><div id="log">
+<td id="news" align="left" valign="top" rowspan="2">
+<table width="640" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" class="topbr"></td></tr>
+<tr class="newstitletr"><td class="title"><img src="templates/<?echo $site_template ?>/images/strel.jpg" alt="" />
+&nbsp; ¬ход на сайт </td></tr>
+<tr><td colspan="2" class="newsborder"></td></tr>
+<tr><td colspan="2" class="newstop"></td></tr>
+<tr><td class="text" colspan="2">
+<p></p><div id="log">
 		<table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tbody>
          <tr>
          <td colspan="2" align="center"><noscript><center><span class="error">¬ключите поддержку Javascript в своЄм браузере.</span></center></noscript></td>
          </tr>
-         <td colspan="2" align="center" style="font-size:12"><div id='Message'><font color="#d4bea6">¬ведите данные своего аккаунта.</font></div></td>
+         <td colspan="2" align="center" style="font-size:12"><div id='Message'><font color="#d4bea6">¬ведите логин и пароль, полученные при регистрации.</font></div></td>
          </tr>
          <tr>
          <td align="right" width="40%" style="font-size:12">Ћогин:</td>
@@ -33,6 +28,4 @@
          <TD colSpan=2 height=15></TD>
          </TR>
   </table>
-
 </TD>
-
