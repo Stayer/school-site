@@ -16,39 +16,36 @@ CREATE TABLE `account` (
   UNIQUE KEY `idx_username` (`username`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Account System';
 
--- ----------------------------
--- Table structure for site_news
--- ----------------------------
+-- Table "site_news" DDL
+
 CREATE TABLE `site_news` (
   `id` int(11) NOT NULL auto_increment,
-  `title` text NOT NULL,
-  `image` varchar(40) default NULL,
-  `short_text` text,
-  `full_text` longtext,
+  `title` text character set cp1251 NOT NULL,
+  `image` varchar(40) character set cp1251 default NULL,
+  `short_text` text character set cp1251,
+  `full_text` longtext character set cp1251,
   `type` mediumint(9) NOT NULL,
-  `name` varchar(60) NOT NULL,
+  `name` varchar(60) character set cp1251 NOT NULL,
   `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=cp1251;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Table structure for site_teach_blog
--- ----------------------------
+-- Table "site_teach_blog" DDL
+
 CREATE TABLE `site_teach_blog` (
-  `id` mediumint(9) NOT NULL,
+  `id` mediumint(9) NOT NULL auto_increment,
   `teach_id` smallint(6) default NULL,
   `date` timestamp NULL default NULL on update CURRENT_TIMESTAMP,
   `title` text,
-  `text` text,
+  `text` longtext,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Table structure for site_teach_profile
--- ----------------------------
+-- Table "site_teach_profile" DDL
+
 CREATE TABLE `site_teach_profile` (
   `id` int(11) NOT NULL,
-  `image` varchar(30) default NULL,
+  `image` varchar(30) default 'troll.jpg',
   `class` tinyint(4) default NULL,
   `letter` varchar(2) default NULL,
   `name` varchar(30) default NULL,
@@ -58,8 +55,10 @@ CREATE TABLE `site_teach_profile` (
   `email` varchar(60) default NULL,
   `icq` varchar(12) default NULL,
   `site` varchar(60) default NULL,
-  `other` varchar(45) default NULL,
+  `other` text,
   `about` text,
+  `blog_enable` decimal(1,0) default '0',
+  `type` smallint(6) default '1',
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -83,43 +82,6 @@ CREATE TABLE `cp_admessage` (
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=cp1251;
 
 -- ----------------------------
--- Table structure for cp_config_country
--- ----------------------------
-CREATE TABLE `cp_config_country` (
-  `id` smallint(2) NOT NULL auto_increment,
-  `country` varchar(40) NOT NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=cp1251;
-
--- ----------------------------
--- Table structure for cp_history
--- ----------------------------
-CREATE TABLE `cp_history` (
-  `id` int(11) NOT NULL auto_increment,
-  `acid` int(11) NOT NULL,
-  `com` varchar(255) NOT NULL,
-  `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `ip` varchar(16) NOT NULL,
-  `usluga` varchar(15) default NULL,
-  `bns` int(11) NOT NULL,
-  `realm` smallint(2) default NULL,
-  `guid` int(11) default NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6633 DEFAULT CHARSET=cp1251;
-
--- ----------------------------
--- Table structure for cp_news
--- ----------------------------
-CREATE TABLE `cp_news` (
-  `id` int(11) NOT NULL auto_increment,
-  `title` text NOT NULL,
-  `news` text NOT NULL,
-  `name` varchar(40) NOT NULL,
-  `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=cp1251;
-
--- ----------------------------
 -- Table structure for cp_sendpass
 -- ----------------------------
 CREATE TABLE `cp_sendpass` (
@@ -130,3 +92,15 @@ CREATE TABLE `cp_sendpass` (
   `date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=463 DEFAULT CHARSET=cp1251;
+
+
+-- Table "site_albums" DDL
+
+CREATE TABLE `site_albums` (
+  `id` int(11) NOT NULL auto_increment,
+  `folder` char(30) default NULL,
+  `title` char(30) default NULL,
+  `text` text,
+  `img_count` smallint(2) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;

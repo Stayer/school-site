@@ -10,12 +10,12 @@ if (!hs) { var hs = {
 lang : {
 	cssDirection: 'ltr',
 	loadingText : 'Загрузка...',
-	loadingTitle : 'Click to cancel',
+	loadingTitle : 'Отмена',
 	focusTitle : 'Click to bring to front',
-	fullExpandTitle : 'Expand to actual size (f)',
+	fullExpandTitle : 'Показать оригинал',
 	creditsText : 'Лицей-интернат №7',
-	creditsTitle : 'тупо ваще',
-	restoreTitle : 'Закрыть изображение нахрен'
+	creditsTitle : 'хех',
+	restoreTitle : 'Закрыть изображение'
 },
 // See http://highslide.com/ref for examples of settings  
 graphicsDir : 'highslide/graphics/',

@@ -11,6 +11,7 @@
    elseif($_GET['s']=="login")include "login.php";
    elseif($_GET['s']=="docs")include "docs.php";
    elseif($_GET['s']=="photos")include "photos.php";
+   elseif($_GET['s']=="photo")include "photos2.php";
    elseif(!isset($_GET['p']))include "hello.php";
    
    if($_GET['p']==2&&$cp_login)include "chars.php";
