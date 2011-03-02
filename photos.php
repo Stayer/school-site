@@ -30,7 +30,7 @@ echo "<table width=100%><TH><tr><td widh=70%>Название альбома </td><td width=10%
 		while ($data=dbarray($result))
                 {
                 echo "<tr>
-    		<td width=70%><a href= './?s=photos&album=$data[id]'>$data[title]</a> </td><td width=10% align=center> $data[img_count] </td><td width=20% align=center><a class='highslide' href="; echo $site_url; echo"images/albums/$data[folder]/1.jpg onclick='return hs.expand(this)'> <img src="; echo $site_url; echo"images/albums/$data[folder]/1.jpg alt='' width=50% height=50%/></a></td></tr>";
+    		<td width=70%><a href= './?s=photos&album=$data[id]'>$data[title]</a> </td><td width=10% align=center> $data[img_count] </td><td width=20% align=center><a class='highslide' href="; echo $site_url; echo"images/albums/$data[folder]/1.jpg onclick='return hs.expand(this)'><img src="; echo $site_url; echo"images/albums/$data[folder]/1.jpg alt='' width=50% height=50%/></a></td></tr>";
                 }
 }
 }
