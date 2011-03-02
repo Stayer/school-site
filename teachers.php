@@ -7,7 +7,7 @@
   <tr><td colspan="2" class="newsborder"></td></tr>
   <tr><td colspan="2" class="newstop"></td></tr>
   <tr><td class="text" colspan="2">
-             <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
+  <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 <?
 	switchConnection(1, "realmd");
 if (!isset($_GET['t'])) {
