@@ -13,7 +13,7 @@
 <br> Телефон: (8-38341) 5-00-22, (8-38341) 5-36-13
 <br> E-mail: <a href=mailto:bsk_sh07@mail.ru>bsk_sh07@mail.ru</a>
  Данный Сайт и общий дизайн, содержание, является собственностью и управляется «Promobit Ltd»<br />
- Алексеем)<br><br><br><br>
+ Алексеем<br><br><br><br>
  © 2010-2011г. www.google.com </span>
 </div>
 </body>
