@@ -4,7 +4,7 @@
   <tr class="newstitletr"><td class="title">Нормативные документы </td></tr>
   <tr><td colspan="2" class="newsborder"></td></tr>
   <tr><td colspan="2" class="newstop"></td></tr>
-  <tr><td bgcolor=white colspan="2">
+  <tr><td class="text" colspan="2">
              <table width = '98%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl" align=center >
     <?
      if ($_GET['id']=='nsot')include "./docs/nsot.htm";
@@ -13,6 +13,7 @@ elseif ($_GET['id']=='soko_kriterii')include "./docs/soko_kriterii.htm";
 elseif ($_GET['id']=='spravkakpmo')include "./docs/spravkakpmo.htm";
 elseif ($_GET['id']=='prikaz373')include "./docs/prikaz373.htm";
 elseif ($_GET['id']=='sovetuchrejdeniya')include "./docs/sovetuchrejdeniya.htm";
+elseif ($_GET['id']=='passport')include "./docs/passport.php";
 ?>
 <br><br>&nbsp&nbsp&nbsp&nbsp<A HREF="javascript:history.back()" onMouseOver="window.status='Назад';return true">Назад</A>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="javascript:scroll(0,0)">Вверх</a>&nbsp&nbsp&nbsp
 <?

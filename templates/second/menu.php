@@ -10,6 +10,7 @@ echo'
 
 	<li><span><a href="./index.php">Главная</a></span></li>
 	<li><span><a href="?s=news">Новости</a></span></li>
+	<li><span><a href="?s=docs&id=passport">Паспорт</a></span></li>
 	<li><span><a href="#5" title="Послледняя ветка">Учительская</a></span>
 		<ul>
 		<li><span><a href="?s=teacher" title="Все учителя">Все учителя</a></span></li>
