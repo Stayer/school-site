@@ -14,6 +14,7 @@ elseif ($_GET['id']=='spravkakpmo')include "./docs/spravkakpmo.htm";
 elseif ($_GET['id']=='prikaz373')include "./docs/prikaz373.htm";
 elseif ($_GET['id']=='sovetuchrejdeniya')include "./docs/sovetuchrejdeniya.htm";
 elseif ($_GET['id']=='passport')include "./docs/passport.php";
+elseif ($_GET['id']=='student')include "./docs/student.php";
 ?>
 <br><br>&nbsp&nbsp&nbsp&nbsp<A HREF="javascript:history.back()" onMouseOver="window.status='Назад';return true">Назад</A>&nbsp&nbsp&nbsp&nbsp&nbsp<a href="javascript:scroll(0,0)">Вверх</a>&nbsp&nbsp&nbsp
 <?
