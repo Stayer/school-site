@@ -13,6 +13,8 @@ elseif ($_GET['id']=='soko_kriterii')include "./docs/soko_kriterii.htm";
 elseif ($_GET['id']=='spravkakpmo')include "./docs/spravkakpmo.htm";
 elseif ($_GET['id']=='prikaz373')include "./docs/prikaz373.htm";
 elseif ($_GET['id']=='sovetuchrejdeniya')include "./docs/sovetuchrejdeniya.htm";
+elseif ($_GET['id']=='polojeniegia9kl')include "./docs/polojeniegia9kl.htm";
+elseif ($_GET['id']=='polojenie11klass')include "./docs/polojenie11klass.htm";
 elseif ($_GET['id']=='passport')include "./docs/passport.php";
 elseif ($_GET['id']=='student')include "./docs/student.php";
 ?>
@@ -24,6 +26,7 @@ elseif ($_GET['id']=='soko_kriterii') echo "<a href=./docs/soko_kriterii.doc>Ска
 elseif ($_GET['id']=='spravkakpmo') echo "<a href=./docs/spravkakpmo.doc>Скачать</a>";
 elseif ($_GET['id']=='prikaz373') echo "<a href=./docs/prikaz373.doc>Скачать</a>";
 elseif ($_GET['id']=='sovetuchrejdeniya') echo "<a href=./docs/sovetuchrejdeniya.doc>Скачать</a>";
+elseif ($_GET['id']=='polojenie11klass') echo "<a href=./docs/polojenie11klass.doc>Скачать</a>";
 ?>
 <br>
 </table>

@@ -12,8 +12,8 @@
 	$result=dbquery("SELECT * FROM site_albums where id=$album") or die("eror");
 	$result=dbarray($result);
 ?>
-<table width = '95%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
-<tr><td><p><h2><? echo $result[title] ?></h2>(Â אכüבמלו <?=$result['img_count'] ?> פמעמדנאפטי)</p></td><td width=20%><a href=?s=photos>Âסו אכüבמלû</a></td></tr>
+<table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
+<tr><td><h2><? echo $result[title] ?></h2>(Â אכüבמלו <?=$result['img_count'] ?> פמעמדנאפטי)</td><td width=20%><a href=?s=photos>Âסו אכüבמלû</a></td></tr>
 <tr><td><?=$result[text]; ?></td></tr>
 <tr><td>
 <br>
