@@ -25,11 +25,9 @@ echo "Х<a href='".$site_url."?p=16'> —мена почты</a><br>Х<a href='".$site_url."?
 ?>
 <div id="content">
 <div id="mcontentblock">
-<table width="969"><tr><td width="2%" rowspan="2"></td><td id="menu" valign="top">
+<table width="969"><tr><td width="4%" rowspan="2"></td><td id="menu" valign="top">
 <div id="menuimg" class="iePNG"></div><br />
 <table id="mtable" cellpadding="0" cellspacing="0">
 <?include "templates/$site_template/menu.php"?>
-<tr><td class="menuborder">
-</td></tr>
 </table>
 </td>

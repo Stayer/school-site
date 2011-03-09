@@ -1,6 +1,4 @@
 <head><script src="<? echo $site_url ?>js/jquery.js" type="text/javascript"></script><head>
-
-
 <?
 include "js/menu.js";
 if(!$cp_register)$register_url; else $register_url=$site_url."?s=register";
@@ -9,24 +7,19 @@ echo'
 <body>   
 <div id="multi-derevo">
 <ul><!-- 1 уровень -->
-	<hr size=0.5px width=100% color=black noshade />
+
 	<li><span><a href="./index.php">Главная</a></span></li>
-	<hr size=0.5px width=100% color=black noshade />
 	<li><span><a href="?s=news">Новости</a></span></li>
-	<hr size=0.5px width=100% color=black noshade />
 	<li><span><a href="#5" title="Послледняя ветка">Учительская</a></span>
 		<ul>
+		<li><span><a href="?s=teacher" title="Все учителя">Все учителя</a></span></li>
 		<li><span><a href="#1" title="Администрация">Администрация</a></span></li>
 		<li><span><a href="#11" title="Начальная школа">Начальная школа</a></span></li>
 		<li><span><a href="#111">Старшая школа</a></span></li></ul></li>
-	<hr size=0.5px width=100% color=black noshade />
 	<li><span><a href="?s=teacher&t=1">Директор </a></span></li>
-	<hr size=0.5px width=100% color=black noshade />
 	<li><span><a href="#3">Родителям</a></span></li>
-	<hr size=0.5px width=100% color=black noshade />
 	<li><span><a href="#4">Ученикам</a></span></li>
-	<hr size=0.5px width=100% color=black noshade />
-	<li><span><a href="#5" title="Документация">КПМО</a></span>
+	<li><span><a href="#doc" title="Документация">КПМО</a></span>
 		<ul>
 		<li><span><a href="?s=docs&id=nsot" title="Новая система оплаты труда">НСОТ</a></span></li>
 		<li><span><a href="?s=docs&id=npf" title="нормативное подушевое финансирование">НПФ</a></span></li>
@@ -45,11 +38,8 @@ echo'
 		</li>
 		</ul>
 	</li>
-	<hr size=0.5px width=100% color=black noshade />
 	<li><span><a href="?s=photos">Галерея</a></span></li>
-	<hr size=0.5px width=100% color=black noshade />
 	<li><span><a href="?s=login">Войти</a></span></li>
-	<hr size=0.5px width=100% color=black noshade />
 </ul>
 </div>
 <!-- /multi-derevo -->';

@@ -1,13 +1,7 @@
     <td id="news" align="left" valign="top" rowspan="2">
-
-
   <table width="640" cellpadding="0" cellspacing="0">
-  
-
-
   <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title"><img src="templates/<?echo $cp_template ?>/images/strel.jpg" alt="" />
-  &nbsp; Изменение пароля </td><td align="right" class="date"></td></tr>
+  <tr class="newstitletr"><td class="title">Изменение пароля </td></tr>
   <tr><td colspan="2" class="newsborder"></td></tr>
   <tr><td colspan="2" class="newstop"></td></tr>
   <tr><td class="text" colspan="2">
@@ -16,7 +10,6 @@
     	$result = dbquery("SELECT * FROM account WHERE id='$ac_id' limit 1");
       $data = dbarray($result);
     $user_pass=sha1(strtoupper($data['username']).":".strtoupper($_POST['old']));
-
 
 	$result = dbquery("SELECT * FROM account WHERE username='$data[username]' AND sha_pass_hash='$user_pass'");
   	if (dbrows($result) != 0) {

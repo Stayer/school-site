@@ -1,13 +1,11 @@
 <?
 error_reporting(0);
 include"config.php";
-
 header("Content-type: text/html; charset=windows-1251");
 extract($_GET,EXTR_OVERWRITE);
 extract($_POST,EXTR_OVERWRITE);
   ob_start();
 date_default_timezone_set('UTC');
-
 function switchConnection($key, $db_type)
   {
     global $realm_db, $CurrentConnection, $CurrentDB;

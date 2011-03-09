@@ -9,9 +9,9 @@ $realm_db = Array(
 
 // Some HTML settings
 
-$header_title       = "Личный Кабинет игроков  --  WOW.1NSK.RU - Бесплатный сервер World Of Warcraft, версия клиента 3.3.5 (12340) , 1 реалм x100. ";
-$header_description = "Cервер World of Warcraft.";
-$header_keywords    = "сервер для wow, world of warcraft pvp сервер, world warcraft, lich king, burning crusade, fun server";
+$header_title       = 'Муниципальная Общеобразовательная Школа-Интернат "Лицей-интернат №7 города Бердска" - официальный сайт';
+$header_description = "Лицей-интернат №7 города Бердска";
+$header_keywords    = "МОШИ, 7, бердск, лицей, интернат, лицей-интернат, школа";
 
 $site_name="1nsk wow";          // имя сайта
 $site_url="http://localhost:1010/";   // адрес сайта

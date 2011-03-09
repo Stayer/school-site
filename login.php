@@ -1,8 +1,7 @@
 <td id="news" align="left" valign="top" rowspan="2">
 <table width="640" cellpadding="0" cellspacing="0">
 <tr><td colspan="2" class="topbr"></td></tr>
-<tr class="newstitletr"><td class="title"><img src="templates/<?echo $site_template ?>/images/strel.jpg" alt="" />
-&nbsp; ¬ход на сайт </td></tr>
+<tr class="newstitletr"><td class="title">¬ход на сайт </td></tr>
 <tr><td colspan="2" class="newsborder"></td></tr>
 <tr><td colspan="2" class="newstop"></td></tr>
 <tr><td class="text" colspan="2">

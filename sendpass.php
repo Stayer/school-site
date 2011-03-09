@@ -1,14 +1,7 @@
-<?error_reporting(0);include "templates/$cp_template/top.php"?>
 <td id="news" align="left" valign="top" rowspan="2">
-
-
   <table width="640" cellpadding="0" cellspacing="0">
-  
-
-
   <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title"><img src="templates/imperial/images/strel.jpg" alt="" />
-  &nbsp; Напоминание пароля </td><td align="right" class="date"></td></tr>
+  <tr class="newstitletr"><td class="title">Напоминание пароля </td></tr>
   <tr><td colspan="2" class="newsborder"></td></tr>
   <tr><td colspan="2" class="newstop"></td></tr>
   <tr><td class="text" colspan="2">
@@ -25,7 +18,6 @@
                    $result=dbquery("INSERT INTO `cp_sendpass` (`acid` , `code`)VALUES ('$data[id]', '$user_code')");
                    if($result)send_mail(''.$username.'',''.$data['email'].'',$new_pass,$user_code);
                    echo'<p></p>Письмо успешно отправлено на электронную почту, указанную при регистрации данного аккаунта.<br><br></p>';
-
 
                             }else echo'
 	<p></p><div class="other_message">Текущий адрес электронной почты введен неверно</div>
@@ -68,4 +60,4 @@
 	</form></p>
 ';
 ?>
-<P></P></DIV>
+</DIV>

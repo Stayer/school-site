@@ -1,18 +1,12 @@
     <td id="news" align="left" valign="top" rowspan="2">
-
-
   <table width="640" cellpadding="0" cellspacing="0">
-  
-
 <?error_reporting(0); if (!isset($_GET['id'])){ ?>
-
   <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title"><img src="templates/<?echo $site_template ?>/images/strel.jpg" alt="" />
-  &nbsp; Новости - Главная </td><td align="right" class="date"></td></tr>
+  <tr class="newstitletr"><td class="title"> Новости - Главная </td></tr>
   <tr><td colspan="2" class="newsborder"></td></tr>
   <tr><td colspan="2" class="newstop"></td></tr>
   <tr><td class="text" colspan="2">
-             <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
+  <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 
     <?
         echo "<table width=100% align=center border=0 cellspacing='4' cellpadding='0'>";
@@ -36,31 +30,25 @@
     </tr>
     </table>";
 
-
-
 } else {
 $id = $_GET['id'];
         switchConnection(1, "realmd");
         $result=dbquery("SELECT * FROM site_news where id=$id") or die("eror");
         $result=dbarray($result);?>
 
-
-  <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title"><img src="templates/<?echo $site_template ?>/images/strel.jpg" alt="" />
-  &nbsp; Новости - <? echo $result[title] ?> </td><td align="right" class="date"></td></tr>
-  <tr><td colspan="2" class="newsborder"></td></tr>
-  <tr><td colspan="2" class="newstop"></td></tr>
-  <tr><td class="text" colspan="2">
-             <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
+<tr><td colspan="2" class="topbr"></td></tr>
+<tr class="newstitletr"><td class="title"> Новости - <? echo $result[title] ?> </td></tr>
+<tr><td colspan="2" class="newsborder"></td></tr>
+<tr><td colspan="2" class="newstop"></td></tr>
+<tr><td class="text" colspan="2">
+<table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 <p><h2> <? echo $result[title] ?></h2></p>
 <p><table width=85%><tr><td width=80%>Дата: <? echo $result[date] ?></td><td>От кого: <? echo $result[name] ?></td></tr></table></p><br><br>
 <table width=95%><?echo $result[full_text] ?></table>
 <br><br>
 <a href="javascript:scroll(0,0)">вверх</a>
-                </table>
-
-
-    
+</table>
+   
 <? } ?>
 </table>
 </table>

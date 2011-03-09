@@ -1,14 +1,8 @@
 <? include "config.php"; ?>
     <td id="news" align="left" valign="top" rowspan="2">
-
-
   <table width="640" cellpadding="0" cellspacing="0">
-  
-
-
   <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title"><img src="templates/<?echo $site_template ?>/images/strel.jpg" alt="" />
-  &nbsp; Регистрация на сайте лицея </td>
+  <tr class="newstitletr"><td class="title">Регистрация на сайте лицея </td>
   <tr><td colspan="2" class="newsborder"></td></tr>
   <tr><td colspan="2" class="newstop"></td></tr>
   <tr><td class="text" colspan="2">
@@ -25,25 +19,21 @@
     else
         {
         $username=stripinput(trim(eregi_replace(" +", " ", $_POST['login'])));
-
         if (!preg_match("/^[0-9A-Z@]{6,20}$/i", $username))
             $error="Необходимо ввести корректный Логин не меньше 6 символов";
         else{
             $result=dbquery("SELECT * FROM account WHERE username='$username'");
-
             if (dbrows($result) != 0)$error="Пользователь с таким логином уже зарегистрирован";
             else $name=true;
             }
         }
        ////////////////////
-       
          //проверяем пароль
     if ($_POST['pass2'] == "")
         $error="Необходимо подтвердить Пароль";
     else
         {
         $password1=stripinput(trim(eregi_replace(" +", "", $_POST['pass'])));
-
         if (preg_match("/^[0-9A-Z@]{6,20}$/i", $password1))
             {
             if ($password1 != $_POST['pass2'])
@@ -57,7 +47,6 @@
         }
 
     ////////////////////
-
        //проверяем почту
     if ($_POST['email'] == "")
         $error="Необходимо ввести E-Mail";
@@ -110,8 +99,6 @@
        $error="Вы успешно зарегистрированы под логином  <strong>$_POST[login]</strong>! <a href='".$site_url."index.php'>Войти</a> на сайт";
             }else $error="Ошибка!";
                                          }
-    
-       
                                  }
     echo '<form method="post" action=""><p><span class=red><b>'.$error.'</b></span></p>
     <table border="0" cellpadding="0" cellspacing="0" class="tbl">
@@ -152,4 +139,3 @@
   ?>
   </p>
 </div>
-

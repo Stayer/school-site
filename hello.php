@@ -1,33 +1,33 @@
 <td id="news" align="left" valign="top" rowspan="2">
 <table width="640" cellpadding="0" cellspacing="0">
 <tr><td colspan="2" class="topbr"></td></tr>
-<tr class="newstitletr"><td class="title"><img src="templates/<?echo $site_template ?>/images/strel.jpg" alt="" />&nbsp; Главная </td><td align="right" class="date"></td></tr>
+<tr class="newstitletr"><td class="title">Главная </td></tr>
 <tr><td colspan="2" class="newsborder"></td></tr>
 <tr><td colspan="2" class="newstop"></td></tr>
 <tr><td class="text" colspan="2">
 <?error_reporting(0);?>
-             <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
-<td>
+<table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
+<tr><td>
                 <p>Мы рады приветствовать Вас на сайте нашего лицея №7!</p>
                     <p><b>Навигация</b>
 Всё это находится в разработке. Нужно немного потерпеть</p>
                     <p><b>А также</b><br>
                     Трололо. Ололо и бугагаа<br>
 Подробнее - у всех в округе!<br><br>
-</td>
-</tr>
+</td></tr>
 <tr width=100% align=center><td align=center>
 <script src='js/slide.js' type='text/javascript' language='JavaScript'></script>
-<p align=center><div id="rotator">
+<font align=center><div id="rotator">
   <ul>
     <li class="show"><a href="/?s=news"><img src=<?=$site_url ?>images/index/news.jpg width="300" height="300"  alt="Новости" /></a></li>
     <li><a href="/?s=teacher"><img src=<?=$site_url ?>images/index/teach.jpg width="300" height="300"  alt="Учителя" /></a></li>
   </ul>
 </div>
-</p>
-</tr></td>
+</font>
+</td></tr>
 </table>
 <p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p>
+<h2><p align=left>Новости</p></h2>
     <?
 	echo "<table width=100% align=center border=0 cellspacing='4' cellpadding='0'>";
 	switchConnection(1, "realmd");
