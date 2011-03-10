@@ -18,7 +18,7 @@ echo'
 		<li><span><a href="#11" title="Начальная школа">Начальная школа</a></span></li>
 		<li><span><a href="#111">Старшая школа</a></span></li></ul></li>
 	<li><span><a href="?s=teacher&t=1">Директор </a></span></li>
-	<li><span><a href="#3">Родителям</a></span></li>
+	<li><span><a href="?s=docs&id=parents">Родителям</a></span></li>
 	<li><span><a href="?s=docs&id=student">Ученикам</a></span></li>
 	<li><span><a href="#doc" title="Документация">КПМО</a></span>
 		<ul>
