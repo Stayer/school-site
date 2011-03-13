@@ -6,12 +6,12 @@ if(!$cp_register)$register_url; else $register_url=$site_url."?s=register";
 echo'
 <body>   
 <div id="multi-derevo">
-<ul><!-- 1 уровень -->
+<ul>
 
 	<li><span><a href="./index.php">Главная</a></span></li>
 	<li><span><a href="?s=news">Новости</a></span></li>
 	<li><span><a href="?s=docs&id=passport">Паспорт</a></span></li>
-	<li><span><a href="#5" title="Послледняя ветка">Учительская</a></span>
+	<li><span><a href="#5" title="">Учительская</a></span>
 		<ul>
 		<li><span><a href="?s=teacher" title="Все учителя">Все учителя</a></span></li>
 		<li><span><a href="#1" title="Администрация">Администрация</a></span></li>
@@ -42,8 +42,7 @@ echo'
 	<li><span><a href="?s=photos">Галерея</a></span></li>
 	<li><span><a href="?s=login">Войти</a></span></li>
 </ul>
-</div>
-<!-- /multi-derevo -->';
+</div>';
                       ?>
    <td width="2%" rowspan="2"></td>
 <tr><td class="button" id="b14a" valign="top"></td></tr>	

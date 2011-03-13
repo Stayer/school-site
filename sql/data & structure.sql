@@ -9,9 +9,9 @@ Server version : 5.0.91-community
 
 /*!40101 SET SQL_MODE=''*/;
 
-create database if not exists `develop`;
+create database if not exists `test`;
 
-USE `develop`;
+USE `test`;
 
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;

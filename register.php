@@ -1,12 +1,12 @@
 <? include "config.php"; ?>
-    <td id="news" align="left" valign="top" rowspan="2">
-  <table width="640" cellpadding="0" cellspacing="0">
-  <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title">Регистрация на сайте лицея </td>
-  <tr><td colspan="2" class="newsborder"></td></tr>
-  <tr><td colspan="2" class="newstop"></td></tr>
-  <tr><td class="text" colspan="2">
-  <p>
+<td id="news" align="left" valign="top" rowspan="2">
+<table width="640" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" class="topbr"></td></tr>
+<tr class="newstitletr"><td class="title">Регистрация на сайте лицея </td>
+<tr><td colspan="2" class="newsborder"></td></tr>
+<tr><td colspan="2" class="newstop"></td></tr>
+<tr><td class="text" colspan="2">
+<p>
 <?  if(isset($_POST['submit'])&&$site_register){
     $name =false;
     $pas  =false;

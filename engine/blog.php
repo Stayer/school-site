@@ -11,7 +11,7 @@
 <table width=96% align=left bgcolor=#33bac0>
 <tr>
 <td width=60% align=left><font color=#344956 size=3px>&nbsp<b>$data[title]</b></font></td>
-<td align=right><font color=#4b9b98><b>$data[date]</b></color></td></tr></table>
+<td align=right><font color=#344956><b>$data[date]</b></color></td></tr></table>
 <table width=96% align=left>
 <tr><td><h4>$data[text]</h></td></tr></table><p>&nbsp</p><p>&nbsp</p><br>";
                 }
