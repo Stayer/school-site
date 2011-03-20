@@ -1,15 +1,15 @@
 <td id="news" align="left" valign="top" rowspan="2">
-  <table width="640" cellpadding="0" cellspacing="0">
-  <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title">Напоминание пароля </td></tr>
-  <tr><td colspan="2" class="newsborder"></td></tr>
-  <tr><td colspan="2" class="newstop"></td></tr>
-  <tr><td class="text" colspan="2">
-    <table width = "100%">
+<table width="640" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" class="topbr"></td></tr>
+<tr class="newstitletr"><td class="title">Напоминание пароля </td></tr>
+<tr><td colspan="2" class="newsborder"></td></tr>
+<tr><td colspan="2" class="newstop"></td></tr>
+<tr><td class="text" colspan="2">
+<table width = "100%">
 <? if (isset($_POST['username']))  {
-    $username=strip_tags(trim($_POST['username']));
-    switchConnection(1,"realmd");
-    	$result = dbquery("SELECT email,id FROM account WHERE username='$username' limit 1");
+$username=strip_tags(trim($_POST['username']));
+switchConnection(1,"realmd");
+$result = dbquery("SELECT email,id FROM account WHERE username='$username' limit 1");
       	if (dbrows($result) != 0) {
            $data = dbarray($result);
             if ($data['email']!="") {
@@ -17,17 +17,13 @@
                    $user_code=base64_encode(sha1(strtoupper($username).":".$new_pass));
                    $result=dbquery("INSERT INTO `cp_sendpass` (`acid` , `code`)VALUES ('$data[id]', '$user_code')");
                    if($result)send_mail(''.$username.'',''.$data['email'].'',$new_pass,$user_code);
-                   echo'<p></p>Письмо успешно отправлено на электронную почту, указанную при регистрации данного аккаунта.<br><br></p>';
-
+                   echo'<p></p>Письмо успешно отправлено на электронную почту, указанную при регистрации данного логина.<br><br></p>';
                             }else echo'
 	<p></p><div class="other_message">Текущий адрес электронной почты введен неверно</div>
 ';
-   
-   
                              }else echo'
-   <p></p><div class="other_message">Данный аккаунт не существует</div>
+   <p></p><div class="other_message">Такого логина не существует</div>
 ';
-
                                  }
     if (isset($_GET['code']))  {
        switchConnection(1,"realmd");
@@ -43,12 +39,11 @@
                                  }else echo'<h2>Сообщение об ошибке</h2>
    <p></p><div class="other_message">Чтож ты сцука делаеш!</div>
 ';
-                                    }
-                                 
+                                    }                      
  echo'	<form name="sendpass" method="post">
 		<table border="0" cellpadding="0" cellspacing="0" class="tbl">
              <tr>
-               <td align="right">Имя аккаунта:</td>
+               <td align="right">Ваш логин:</td>
                <td><input name="username" type="text" class="inp" size="15" style="width: 165px;"></td>
              </tr>
              <tr>

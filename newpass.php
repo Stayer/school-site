@@ -1,13 +1,13 @@
-    <td id="news" align="left" valign="top" rowspan="2">
-  <table width="640" cellpadding="0" cellspacing="0">
-  <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title">Изменение пароля </td></tr>
-  <tr><td colspan="2" class="newsborder"></td></tr>
-  <tr><td colspan="2" class="newstop"></td></tr>
-  <tr><td class="text" colspan="2">
+<td id="news" align="left" valign="top" rowspan="2">
+<table width="640" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" class="topbr"></td></tr>
+<tr class="newstitletr"><td class="title">Изменение пароля </td></tr>
+<tr><td colspan="2" class="newsborder"></td></tr>
+<tr><td colspan="2" class="newstop"></td></tr>
+<tr><td class="text" colspan="2">
 <?error_reporting(0); if (isset($_POST['old'])&&isset($_POST['new'])&&isset($_POST['new2']))  {
-    switchConnection(1,"realmd");
-    	$result = dbquery("SELECT * FROM account WHERE id='$ac_id' limit 1");
+switchConnection(1,"realmd");
+   	$result = dbquery("SELECT * FROM account WHERE id='$ac_id' limit 1");
       $data = dbarray($result);
     $user_pass=sha1(strtoupper($data['username']).":".strtoupper($_POST['old']));
 

@@ -26,5 +26,7 @@
          <TR>
          <TD colSpan=2 height=15></TD>
          </TR>
+<tr><td>Забыли пароль? попробуйте <a href= <?=$site_url ?>?s=send>восстановить</a> его</td><tr>
   </table>
+
 </TD>
