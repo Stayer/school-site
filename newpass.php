@@ -7,20 +7,18 @@
 <tr><td class="text" colspan="2">
 <?error_reporting(0); if (isset($_POST['old'])&&isset($_POST['new'])&&isset($_POST['new2']))  {
 switchConnection(1,"realmd");
-   	$result = dbquery("SELECT * FROM account WHERE id='$ac_id' limit 1");
-      $data = dbarray($result);
-    $user_pass=sha1(strtoupper($data['username']).":".strtoupper($_POST['old']));
-
+	$result = dbquery("SELECT * FROM account WHERE id='$ac_id' limit 1");
+	$data = dbarray($result);
+	$user_pass=sha1(strtoupper($data['username']).":".strtoupper($_POST['old']));
 	$result = dbquery("SELECT * FROM account WHERE username='$data[username]' AND sha_pass_hash='$user_pass'");
-  	if (dbrows($result) != 0) {
-     if(strlen($_POST['new'])>=6){
-       if($_POST['new']==$_POST['new2']){
-             $new=sha1(strtoupper($data['username']).":".strtoupper($_POST['new2']));
-            dbquery("UPDATE account SET sha_pass_hash='$new',v=0, s=0 WHERE id='$ac_id' limit 1");
-
-            $value="Смена пароля аккаунта.";
-         history($value,$ac_id);
-           echo'<h2>Смена пароля</h2>
+	if (dbrows($result) != 0) {
+	if(strlen($_POST['new'])>=6){
+		if($_POST['new']==$_POST['new2']){
+		$new=sha1(strtoupper($data['username']).":".strtoupper($_POST['new2']));
+		dbquery("UPDATE account SET sha_pass_hash='$new',v=0, s=0 WHERE id='$ac_id' limit 1");
+		$value="Смена пароля аккаунта.";
+		history($value,$ac_id);
+		echo'<h2>Смена пароля</h2>
 	<p></p><div class="other_message">Пароль успешно изменен</div>
 ';
 
