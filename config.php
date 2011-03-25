@@ -1,5 +1,4 @@
 <?
-
 $realm_db = Array(
 	'addr' => "127.0.0.1:3306",		// SQL server IP:port this realmd located on
 	'user' => "root",			// SQL server login this realmd located on
@@ -7,22 +6,15 @@ $realm_db = Array(
 	'name' => "develop",			// Realmd DB name
 	);
 
-// Some HTML settings
-
-$header_title       = 'Муниципальная Общеобразовательная Школа-Интернат "Лицей-интернат №7 города Бердска" - официальный сайт';
-$header_description = "Лицей-интернат №7 города Бердска";
-$header_keywords    = "МОШИ, 7, бердск, лицей, интернат, лицей-интернат, школа";
-
-$site_name="1nsk wow";          // имя сайта
+$site_name="МОШИ №7 г.Бердска";          // имя сайта
 $site_url="http://localhost:1010/";   // адрес сайта
-$forum_url="http://1nsk.ru/forum/forumdisplay.php?f=121";  // адрес форума
 $register_url="http://localhost:1010/?s=register";  // адрес страницы регистрации
 
 $news_count=5;
 ///////////////////////////////
 
-// Panel stile
-$site_template = "second"; // imperial , lich
+// Panel style
+$site_template = "second";
 
 //Почта "Сообщение Администратору" , "Напоминание пароля"
 $admin_name  = "Властелин (всея Варкрафта)";
@@ -47,6 +39,6 @@ $email_body_sendpass='<p>Здраствуйте,  [USERNAME]</p>
 
 // Registration in control panel.
 $site_register = true;
-$level   = 1; // 0=> Classic 1=> TBC 2=> Wotlk
+$level   = 1; // 1=>user
 
 ?>
