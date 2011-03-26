@@ -7,9 +7,9 @@ switchConnection(1,"realmd");
 dbquery("INSERT INTO site_news (title, short_text, full_text, type) VALUES ('$_POST[title]', '$_POST[short_text]', '$_POST[full_text]', '$category') ");
 echo "Новость успешно добавлена!";
 }
-echo "<b><i><h2><p align = left>Добавление новости</p></h2></i></b>";
+echo "<b><h2><font color=#01b2f1><p align = left>Добавление новости</p></font></h2></b>";
 echo "
-<form name='addnews' method='post' enctype='multipart/form-data'>
+<form name='newsadd' method='post' enctype='multipart/form-data'>
 Заголовок новости<font color=red>*</font>:<br>
 <input type='text' name='title' size='58'><br><br>
 Короткий текст новости (для отображения на главной сайта)<font color=red>*</font>:<br>
@@ -30,9 +30,10 @@ echo "
 <input type=radio name='category' value=128>Прочее<br>
 </td></tr></table><br><br>
 <label><input name='Submit' type=submit value='Отправить данные'></label>
-</form>";
-?>
+</form>
 <br><br>	
-<b>Примечание: поля, отмеченные знаком <font color=red>*</font>, обязательны к заполнению!</b>
+<b>Примечание: поля, отмеченные знаком <font color=red>*</font>, обязательны к заполнению!</b>";
 }
-else echo "Вы должны авторизироваться!"
+else echo "Вы должны авторизироваться!";
+
+?>

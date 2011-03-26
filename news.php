@@ -8,23 +8,23 @@
 <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 
 <?error_reporting(0); if (!isset($_GET['id'])&&!isset($_GET['do'])){ 
-if($cp_login){echo "<td width=90% align=right><a href=./?s=news&do=addnews>[Добавить новость]</a></td>";}
-        echo "<table width=100% align=center border=0 cellspacing='4' cellpadding='0'>";
-        switchConnection(1, "realmd");
-        $result=dbquery("SELECT * FROM site_news order by id desc limit $news_count") or die("eror");
+if($cp_login){echo "<td width=90% align=right><a href=./?s=news&do=newsadd>[Добавить новость]</a></td>";}
+	echo "<table width=100% align=center border=0 cellspacing='4' cellpadding='0'>";
+	switchConnection(1, "realmd");
+	$result=dbquery("SELECT * FROM site_news order by id desc limit $news_count") or die("eror");
 
-        if (dbrows($result) != 0)
-            {
+	if (dbrows($result) != 0)
+	{
             while ($data=dbarray($result))
-                {
+		{
                 echo "<tr>
     <td><p><b><a href= '".$site_url."?s=news&id=$data[id]'> $data[title] </a></b></p>$data[short_text]</td>
     </tr>
 		<tr>
     <td align=right><font size='1'>Размещено: $data[date] от <b>$data[name]</b></font></td>
     </tr>";
-                }
-            }
+		}
+	}
         else echo "<tr>
     <td colspan=2 align=center>Нет новостей</td>
     </tr>
@@ -42,7 +42,7 @@ $id = $_GET['id'];
 <a href="javascript:scroll(0,0)">вверх</a>
 </table>
 <? }
-elseif (isset($_GET['do=addnews'])) include "engine/addnews.php";
+elseif ($_GET['do']==newsadd) include "./engine/newsadd.php";
 ?>
 </table>
 </table>
