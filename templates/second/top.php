@@ -9,17 +9,21 @@
 if($cp_login){
 	$result=dbquery("SELECT level FROM account WHERE id =$ac_id ");
 	$data=dbarray($result);
+	$level=$data['level'];
 	$gm="Ученик";
 	If($data['level']==1)$gm="Преподаватель";
 	If($data['level']==2)$gm="Администрация";
 	If($data['level']==3)$gm="Директор";
 	If($data['level']==4)$gm="Бог";
-	if($data['level']==0)$result=dbquery("SELECT * FROM site_pupil_profile WHERE id =$ac_id ");
-	else $result=dbquery("SELECT * FROM site_teach_profile WHERE id =$ac_id ");
+	if($data['level']==1) $result=dbquery("SELECT * FROM site_pupil_profile WHERE id =$ac_id ");
+	elseif($data['level']==2) $result=dbquery("SELECT * FROM site_teach_profile WHERE id =$ac_id ");
 	$data=dbarray($result);
 echo" <div id='userinfo'><div class='content' align='right'>
-<a href=./index.php?p=6>Здравствуйте,</a> <strong>$data[secondname]&nbsp$data[name]</strong><br /> • <a href='".$site_url."?s=teacher&t=$data[id]'>Профиль</a> • <a href='".$site_url."logout.php'>Выйти</a><br />";
-echo "Ваш e-mail: <strong><font color=green>$datag[email] </font></strong><br />";
+<a href=./index.php?p=6>Здравствуйте,</a> <strong>$data[secondname]&nbsp$data[name]</strong><br /> •"; 
+if ($level==1) echo"<a href='?s=pupil&p=$data[id]'"; 
+elseif ($level==2) echo"<a href='?s=teacher&t=$data[id]'"; 
+echo ">Профиль</a> • <a href='".$site_url."logout.php'>Выйти</a><br />";
+echo "Ваш e-mail: <strong>$datag[email]</strong><br />";
 echo "•<a href='".$site_url."?p=16'> Смена почты</a><br>•<a href='".$site_url."?p=15'> Смена пароля</a></div></div>";
 		}
 ?>
