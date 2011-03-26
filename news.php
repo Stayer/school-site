@@ -7,7 +7,7 @@
 <tr><td class="text" colspan="2">
 <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 
-<?error_reporting(0); if (!isset($_GET['id']) || (!isset($_GET['do'])){ 
+<?error_reporting(0); if (!isset($_GET['id'])&&!isset($_GET['do'])){ 
 if($cp_login){echo "<td width=90% align=right><a href=./?s=news&do=addnews>[Добавить новость]</a></td>";}
         echo "<table width=100% align=center border=0 cellspacing='4' cellpadding='0'>";
         switchConnection(1, "realmd");
@@ -42,7 +42,7 @@ $id = $_GET['id'];
 <a href="javascript:scroll(0,0)">вверх</a>
 </table>
 <? }
- elseif (isset($_GET['do'])) { ?>
- OLOLO
+elseif (isset($_GET['do=addnews'])) include "engine/addnews.php";
+?>
 </table>
 </table>
