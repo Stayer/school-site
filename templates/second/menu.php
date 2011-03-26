@@ -19,6 +19,7 @@ echo'
 	<li><span><a href="?s=teacher&t=1">Директор </a></span></li>
 	<li><span><a href="?s=docs&id=parents">Родителям</a></span></li>
 	<li><span><a href="?s=docs&id=student">Ученикам</a></span></li>
+	<li><span><a href="?s=pupil" title="Все ученики">Все ученики</a></span></li>
 	<li><span><a href="#doc" title="Документация">КПМО</a></span>
 		<ul>
 		<li><span><a href="?s=docs&id=nsot" title="Новая система оплаты труда">НСОТ</a></span></li>

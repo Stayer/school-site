@@ -8,10 +8,10 @@
   <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 <?
 	switchConnection(1, "realmd");
-if (!isset($_GET['t'])) {
-echo "<p align=center>Здесь представлены все учителя, которые работают в нашей школе!</p></br></br>";
-	$result=dbquery("SELECT * FROM site_teach_profile order by level desc, secondname asc") or die("eror");
-echo "<table width=90% align=center><tr><td width=35%><h2>Фамилия Имя</h2></td><td width=30%><h2>Предмет</h2></td></tr><tr><td width=35%></td><td width=30%></td></tr>";
+if (!isset($_GET['p'])) {
+echo "<p align=center>Список учеников, зарегистрированных на сайте. Находите друг друга и общайтесь!</p></br></br>";
+	$result=dbquery("SELECT * FROM site_pupil_profile order by level desc, secondname asc") or die("eror");
+echo "<table width=90% align=center><tr><td width=35%><h2>Фамилия Имя</h2></td><td width=30%><h2>Класс</h2></td></tr><tr><td width=35%></td><td width=30%></td></tr>";
         if (dbrows($result) != 0)
             {
 while ($data=dbarray($result))
@@ -25,11 +25,11 @@ echo "</table>";
 }
 else {	
         $t = $_GET['t'];
-        $query= "SELECT * FROM site_teach_profile WHERE id=$t";
+        $query= "SELECT * FROM site_pupil_profile WHERE id=$t";
         $result= dbquery($query);
         $result= dbarray($result);
 if (isset($result['id'])){
-        include "./engine/profile_t.php";
+        include "./engine/profile_p.php";
 if ($result[blog_enable]=1) {
         include "./engine/blog.php";
 }
