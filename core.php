@@ -102,6 +102,10 @@ function dbconnect($db_host, $db_user, $db_pass, $db_name) {
   $glob_name=$datag['username'];
   $cp_login=true;
   $level=$datag['level'];
+  if ($level==1||$level==5) $result=dbquery("SELECT * FROM site_pupil_profile WHERE id =$ac_id ");
+  else $result=dbquery("SELECT * FROM site_teach_profile WHERE id =$ac_id "); 
+  $profile=dbarray($result);
+
    unset($id,$pass);
 	} else {
     unset($id,$pass);

@@ -1,5 +1,5 @@
 <table width=95%><tr>
-<td width=50%>Профиль учителя - <?=$result[name], " ", $result[secondname] ?>
+<td width=50%>Профиль ученика - <?=$result[name], " ", $result[secondname] ?>
 <? if (isset($result[letter])) echo "<br>Классный руководитель: $result[class] $result[letter]"; ?>
 <br>Основной предмет: <?=$result[science] ?>
 <br>

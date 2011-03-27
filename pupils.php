@@ -29,7 +29,7 @@ else {
         $result= dbquery($query);
         $result= dbarray($result);
 if (isset($result['id'])){
-        include "./engine/profile_p.php";
+        include "./engine/profile.php";
 if ($result[blog_enable]=1) {
         include "./engine/blog.php";
 }

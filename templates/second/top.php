@@ -7,9 +7,6 @@
 </div>
 <? error_reporting(0);
 if($cp_login){
-if ($level==1||$level==5) $result=dbquery("SELECT * FROM site_pupil_profile WHERE id =$ac_id ");
-else $result=dbquery("SELECT * FROM site_teach_profile WHERE id =$ac_id "); 
-$data=dbarray($result);
 switch ($level) {
 case 1:   $gm="”ченик"; break;
 case 2:   $gm="ѕреподаватель"; break;
@@ -18,10 +15,10 @@ case 4:   $gm="ƒиректор"; break;
 case 5:   $gm="јдмин сайта"; break;}
 
 echo" <div id='userinfo'><div class='content' align='right'>
-<a href=./index.php?p=6> «дравствуйте,</a> <strong>$data[secondname]&nbsp$data[name]</strong><br /> Х "; 
-if ($level==1 || $level==2) echo"<a href='?s=pupil&p=$data[id]'>";  else echo"<a href='?s=teacher&t=$data[id]'>"; 
+<a href=./index.php?p=6>«дравствуйте,</a> <strong>$profile[secondname] $profile[name]</strong><br /> Х "; 
+if ($level==1 || $level==5) echo"<a href='?s=pupil&p=$profile[id]'>";  else echo"<a href='?s=teacher&t=$profile[id]'>"; 
 echo "ѕрофиль</a> Х <a href='".$site_url."logout.php'>¬ыйти</a><br />";
-echo "¬аш e-mail: <strong>$datag[email]</strong><br />";
+echo "¬аш e-mail: <strong>$profileg[email]</strong><br />";
 echo "Х<a href='".$site_url."?p=16'> —мена почты</a><br>Х<a href='".$site_url."?p=15'> —мена парол€</a></div></div>";
 		}
 ?>

@@ -11,7 +11,7 @@
          <tr>
          <td colspan="2" align="center"><noscript><center><span class="error">Включите поддержку Javascript в своём браузере.</span></center></noscript></td>
          </tr>
-         <td colspan="2" align="center" style="font-size:12"><div id='Message'><font color="#d4bea6">Введите логин и пароль, полученные при регистрации.</font></div></td>
+         <td colspan="2" align="center" style="font-size:12"><div id='Message'><font color="#d4bea6">Введите логин и пароль, полученные при регистрации</font></div><br></td>
          </tr>
          <tr>
          <td align="right" width="40%" style="font-size:12">Логин:</td>
@@ -26,7 +26,7 @@
          <TR>
          <TD colSpan=2 height=15></TD>
          </TR>
-<tr><td>Забыли пароль? попробуйте <a href= <?=$site_url ?>?s=send>восстановить</a> его</td><tr>
   </table>
-
+<center>Забыли пароль? попробуйте <a href= <?=$site_url ?>?s=send>восстановить</a> его<br>
+Ещё не создали свою учётную запись? Добро пожаловать на <a href= <?=$site_url ?>?s=register>регистрацию</a></center>
 </TD>

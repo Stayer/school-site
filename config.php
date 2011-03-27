@@ -37,8 +37,8 @@ $email_body_sendpass='<p>Здраствуйте,  [USERNAME]</p>
 <p>С уважением, Администрация сервера - [SITE_URL]</p>';
 ///////////////////////////////////////
 
-// Registration in control panel.
+// Registration in site
 $site_register = true;
-$level   = 1; // 1=>user
+$expansion  = 1; // 1=>user
 
 ?>

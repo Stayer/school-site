@@ -93,18 +93,15 @@
     if ($name && $pas && $mail && $capt && $rules){
     
      $pass=sha1(strtoupper($_POST['login']) . ":" . strtoupper($_POST['pass']));
-     $result=dbquery("INSERT INTO `account` (`username` , `sha_pass_hash` ,`email`, `expansion`)VALUES
+     $result=dbquery("INSERT INTO `account` (`username` , `sha_pass_hash` ,`email`, `level`)VALUES
      ('".strtoupper($_POST[login])."', '$pass', '$_POST[email]', '$expansion');");
-     $result1=dbquery("SELECT `id` FROM `account` WHERE `username`='$_POST[login]'");
-     $result1=dbarray($result1);
-     dbquery("INSERT INTO `site_pupil_profile` (`id`, `name`, `email`) VALUES ($result1['id'], '$_POST[login]', '$_POST[email]')");
 
       if ($result){
-       $error="Вы успешно зарегистрированы под логином  <strong>$_POST[login]</strong>! <a href='".$site_url."index.php'>Войти</a> на сайт";
+       $error="Вы успешно зарегистрированы под логином  <strong>$_POST[login]</strong>! <a href='".$site_url."?s=login'>Войти</a> на сайт";
             }else $error="Ошибка!";
                                          }
                                  }
-    echo '<form method="post" action=""><p><span class=red><b>'.$error.'</b></span></p>
+    echo '<form method="post" action=""><p><span class=red>'.$error.'</span></p>
     <table border="0" cellpadding="0" cellspacing="0" class="tbl">
              <tr>
                <td align="right">Логин:</td>
