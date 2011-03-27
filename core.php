@@ -96,13 +96,12 @@ function dbconnect($db_host, $db_user, $db_pass, $db_name) {
 	//echo $pass;
 	$result = dbquery("SELECT * FROM account WHERE id='$id' AND sha_pass_hash='$pass'");
 	if (dbrows($result) != 0) {
+  $ac_id=$id;
+  dbquery("UPDATE account SET last_ip='$_SERVER[REMOTE_ADDR]' WHERE id='$ac_id'");
   $datag= dbarray($result);
   $glob_name=$datag['username'];
   $cp_login=true;
-  $ac_id=$id;
-
-$acc_mail = dbquery("SELECT count(*)FROM account WHERE email='$datag[email]'");
-$acc_mail=mysql_result ($acc_mail,0);
+  $level=$datag['level'];
    unset($id,$pass);
 	} else {
     unset($id,$pass);

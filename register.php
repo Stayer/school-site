@@ -95,6 +95,10 @@
      $pass=sha1(strtoupper($_POST['login']) . ":" . strtoupper($_POST['pass']));
      $result=dbquery("INSERT INTO `account` (`username` , `sha_pass_hash` ,`email`, `expansion`)VALUES
      ('".strtoupper($_POST[login])."', '$pass', '$_POST[email]', '$expansion');");
+     $result1=dbquery("SELECT `id` FROM `account` WHERE `username`='$_POST[login]'");
+     $result1=dbarray($result1);
+     dbquery("INSERT INTO `site_pupil_profile` (`id`, `name`, `email`) VALUES ($result1['id'], '$_POST[login]', '$_POST[email]')");
+
       if ($result){
        $error="Вы успешно зарегистрированы под логином  <strong>$_POST[login]</strong>! <a href='".$site_url."index.php'>Войти</a> на сайт";
             }else $error="Ошибка!";

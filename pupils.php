@@ -1,11 +1,11 @@
 <td id="news" align="left" valign="top" rowspan="2">
- <table width="640" cellpadding="0" cellspacing="0">
-  <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title">Учителя </td></tr>
-  <tr><td colspan="2" class="newsborder"></td></tr>
-  <tr><td colspan="2" class="newstop"></td></tr>
-  <tr><td class="text" colspan="2">
-  <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
+<table width="640" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" class="topbr"></td></tr>
+<tr class="newstitletr"><td class="title">Ученики </td></tr>
+<tr><td colspan="2" class="newsborder"></td></tr>
+<tr><td colspan="2" class="newstop"></td></tr>
+<tr><td class="text" colspan="2">
+<table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 <?
 	switchConnection(1, "realmd");
 if (!isset($_GET['p'])) {
@@ -17,14 +17,14 @@ echo "<table width=90% align=center><tr><td width=35%><h2>Фамилия Имя</h2></td><
 while ($data=dbarray($result))
                 {
                 echo "<tr>
-    <td width=35%>"; if ($data['level']>0) {echo "<a href= './?s=teacher&t=$data[id]'>$data[secondname] $data[name] </a>";}  else {echo "$data[secondname] $data[name] ";} echo "</td><td width=30%> $data[science] </td><td width=10%></td>
+    <td width=35%>"; if ($data['level']>0) {echo "<a href= './?s=pupil&p=$data[id]'>$data[secondname] $data[name] </a>";}  else {echo "$data[secondname] $data[name] ";} echo "</td><td width=30%> $data[science] </td><td width=10%></td>
     </tr>";
                 }
 }
 echo "</table>";
 }
 else {	
-        $t = $_GET['t'];
+        $t = $_GET['p'];
         $query= "SELECT * FROM site_pupil_profile WHERE id=$t";
         $result= dbquery($query);
         $result= dbarray($result);

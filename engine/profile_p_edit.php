@@ -1,14 +1,14 @@
 <td id="news" align="left" valign="top" rowspan="2">
- <table width="640" cellpadding="0" cellspacing="0">
-  <tr><td colspan="2" class="topbr"></td></tr>
-  <tr class="newstitletr"><td class="title">Мой профиль </td></tr>
-  <tr><td colspan="2" class="newsborder"></td></tr>
-  <tr><td colspan="2" class="newstop"></td></tr>
-  <tr><td class="text" colspan="2">
-  <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
+<table width="640" cellpadding="0" cellspacing="0">
+<tr><td colspan="2" class="topbr"></td></tr>
+<tr class="newstitletr"><td class="title">Мой профиль </td></tr>
+<tr><td colspan="2" class="newsborder"></td></tr>
+<tr><td colspan="2" class="newstop"></td></tr>
+<tr><td class="text" colspan="2">
+<table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 <?
-if($cp_login) {
-if (isset($_POST['name'])&&isset($_POST['secondname'])){
+if($cp_login&&$level==1) {
+if (isset($_POST['name'])&&isset($_POST['secondname'])&&$_POST['birth']!='пример:1994-03-08'){
 switchConnection(1,"realmd");
 dbquery("INSERT INTO site_pupil_profile (id, name, secondname, level) VALUES ($ac_id, '$_POST[name]', '$_POST[secondname]', 1) ");
 echo "Новость успешно добавлена!";
@@ -85,7 +85,6 @@ echo "
 <b>Примечание: поля, отмеченные знаком <font color=red>*</font>, обязательны к заполнению!</b>";
 }
 else echo "Вы должны авторизироваться!";
-
 ?>
-                </table>
-    </table>
+</table>
+</table>
