@@ -7,11 +7,16 @@
 <tr><td class="text" colspan="2">
 <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 <?
+if (!$activ) {
+$query="UPDATE site_pupil_profile (name, secondname, birth, site, icq, email, learn, class, letter, end_year, science, about, other, level) VALUES ('$_POST[name]', '$_POST[secondname]', '$_POST[birth]', '$_POST[ site]', '$_POST[icq]', '$_POST[email]', '$_POST[learn]', '$class', '$_POST[letter]', '$end_year', '$_POST[science]', '$_POST[about]', '$_POST[other]', 1) WHERE id=$ac_id");}
+else  {$query="INSERT INTO site_pupil_profile (id, name, secondname, birth, site, icq, email, learn, class, letter, end_year, science, about, other, level) VALUES ($ac_id, '$_POST[name]', '$_POST[secondname]', '$_POST[birth]', '$_POST[ site]', '$_POST[icq]', '$_POST[email]', '$_POST[learn]', '$class', '$_POST[letter]', '$end_year', '$_POST[science]', '$_POST[about]', '$_POST[other]', 1)");}
 if($cp_login&&$level==1) {
 if (isset($_POST['name'])&&isset($_POST['secondname'])&&$_POST['birth']!='пример:1994-03-08'){
 switchConnection(1,"realmd");
-dbquery("INSERT INTO site_pupil_profile (id, name, secondname, level) VALUES ($ac_id, '$_POST[name]', '$_POST[secondname]', 1) ");
-echo "Новость успешно добавлена!";
+if ($_POST[learn]==1) {$end_year='0'; $class='$_POST[class]';} else {$end_year='$_POST[end_year]'; $class='0';}
+$result=dbquery($query);
+// if ($result) echo "Профиль успешно отредактирован!";
+// else echo "Ошибка! Проверьте правильность введённых данных! Вернуться <A HREF="javascript:history.back()" onMouseOver="window.status='назад';return true">назад</A>";
 }
 echo "<b><h2><font color=#01b2f1><p align = left>Редактирование профиля</p></font></h2></b>";
 echo "
@@ -71,7 +76,7 @@ echo "
 
 <h3>Прочее</h3>
 Ваши любимые предметы (через запятую, не более 30 символов):<br>
-<input type='text' name='name' size='30' maxlength='30'><br><br>
+<input type='text' name='science' size='30' maxlength='30'><br><br>
 
 Укажите информацию о себе:<br>
 <textarea name='about' rows=5 cols=50></textarea><br><br>

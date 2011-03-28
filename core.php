@@ -4,7 +4,7 @@ include"config.php";
 header("Content-type: text/html; charset=windows-1251");
 extract($_GET,EXTR_OVERWRITE);
 extract($_POST,EXTR_OVERWRITE);
-  ob_start();
+ob_start();
 date_default_timezone_set('UTC');
 function switchConnection($key, $db_type)
   {
@@ -105,6 +105,8 @@ function dbconnect($db_host, $db_user, $db_pass, $db_name) {
   if ($level==1||$level==5) $result=dbquery("SELECT * FROM site_pupil_profile WHERE id =$ac_id ");
   else $result=dbquery("SELECT * FROM site_teach_profile WHERE id =$ac_id "); 
   $profile=dbarray($result);
+  if (!$profile) $activ=false; else $activ=true;
+
 
    unset($id,$pass);
 	} else {

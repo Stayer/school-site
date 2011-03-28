@@ -17,7 +17,7 @@
 	elseif($_GET['p']==15&&$cp_login)include "newpass.php";
 	elseif($_GET['p']==16&&$cp_login)include "newmail.php";
 	elseif($_GET['p']==18&&$cp_login)include "sendmail.php";
-	elseif($_GET['p']==1&&$cp_login)include "./engine/profile_p_edit.php";
+	elseif($_GET['p']==1&&$cp_login)include "./engine/profile_edit.php";
 
 	include"templates/$site_template/footer.php";
 ?>
