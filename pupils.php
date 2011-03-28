@@ -17,7 +17,7 @@ echo "<table width=90% align=center><tr><td width=35%><h2>Фамилия Имя</h2></td><
 while ($data=dbarray($result))
                 {
                 echo "<tr>
-    <td width=35%>"; if ($data['level']>0) {echo "<a href= './?s=pupil&p=$data[id]'>$data[secondname] $data[name] </a>";}  else {echo "$data[secondname] $data[name] ";} echo "</td><td width=30%> $data[science] </td><td width=10%></td>
+    <td width=35%>"; if ($data['level']>0) {echo "<a href= './?s=pupil&p=$data[id]'>$data[secondname] $data[name] </a>";}  else {echo "$data[secondname] $data[name] ";} echo "</td><td width=30%> $data[class]  $data[letter] </td><td width=10%></td>
     </tr>";
                 }
 }
@@ -29,7 +29,7 @@ else {
         $result= dbquery($query);
         $result= dbarray($result);
 if (isset($result['id'])){
-        include "./engine/profile.php";
+        include "./engine/profile_p.php";
 if ($result[blog_enable]=1) {
         include "./engine/blog.php";
 }

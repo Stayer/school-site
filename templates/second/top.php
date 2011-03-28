@@ -17,9 +17,8 @@ case 5:   $gm="јдмин сайта"; break;}
 echo" <div id='userinfo'><div class='content' align='right'>
 <a href=./index.php?p=6>«дравствуйте,</a> <strong>$profile[secondname] $profile[name]</strong><br /> Х "; 
 if ($level==1 || $level==5) echo"<a href='?s=pupil&p=$profile[id]'>";  else echo"<a href='?s=teacher&t=$profile[id]'>"; 
- if($result) echo "активирован"; else "не активирован";
-echo "ѕрофиль</a> Х <a href='".$site_url."logout.php'>¬ыйти</a><br />";
-echo "¬аш e-mail: <strong>$profileg[email]</strong><br />";
+echo "ѕрофиль</a> Х <a href=?p=1>–едактировать</a> Х <a href='".$site_url."logout.php'>¬ыйти</a><br />";
+echo "¬аш e-mail: <strong>$profile[email]</strong><br />";
 echo "Х<a href='".$site_url."?p=16'> —мена почты</a><br>Х<a href='".$site_url."?p=15'> —мена парол€</a><br></div></div>";
 		}
 ?>
