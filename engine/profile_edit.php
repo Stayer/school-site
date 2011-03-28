@@ -7,17 +7,14 @@
 <tr><td class="text" colspan="2">
 <table width = '100%' cellspacing = '0' cellpadding = '0' border = '0' class = "tbl">
 <?
-if (!$activ) {
-$query="UPDATE site_pupil_profile (name, secondname, birth, site, icq, email, learn, class, letter, end_year, science, about, other, level) VALUES ('$_POST[name]', '$_POST[secondname]', '$_POST[birth]', '$_POST[ site]', '$_POST[icq]', '$_POST[email]', '$_POST[learn]', '$class', '$_POST[letter]', '$end_year', '$_POST[science]', '$_POST[about]', '$_POST[other]', 1) WHERE id=$ac_id");}
-else  {$query="INSERT INTO site_pupil_profile (id, name, secondname, birth, site, icq, email, learn, class, letter, end_year, science, about, other, level) VALUES ($ac_id, '$_POST[name]', '$_POST[secondname]', '$_POST[birth]', '$_POST[ site]', '$_POST[icq]', '$_POST[email]', '$_POST[learn]', '$class', '$_POST[letter]', '$end_year', '$_POST[science]', '$_POST[about]', '$_POST[other]', 1)");}
 if($cp_login&&$level==1) {
 if (isset($_POST['name'])&&isset($_POST['secondname'])&&$_POST['birth']!='пример:1994-03-08'){
 switchConnection(1,"realmd");
-if ($_POST[learn]==1) {$end_year='0'; $class='$_POST[class]';} else {$end_year='$_POST[end_year]'; $class='0';}
+if ($activ) {
+$query="UPDATE site_pupil_profile SET name='$_POST[name]', secondname='$_POST[secondname]', birth='$_POST[birth]', site='$_POST[site]', icq='$_POST[icq]', email='$_POST[email]', learn='$_POST[learn]', class='$class', letter='$_POST[letter]', end_year='$end_year', science='$_POST[science]', about='$_POST[about]', other='$_POST[other]', level='1' WHERE id=$ac_id";}
+else  {$query="INSERT INTO site_pupil_profile (id, name, secondname, birth, site, icq, email, learn, class, letter, end_year, science, about, other, level) VALUES ($ac_id, '$_POST[name]', '$_POST[secondname]', '$_POST[birth]', '$_POST[site]', $_POST[icq], '$_POST[email]', '$_POST[learn]', '$_POST[class]', '$_POST[letter]', '$_POST[end_year]', '$_POST[science]', '$_POST[about]', '$_POST[other]', 1)";}
 $result=dbquery($query);
-// if ($result) echo "Профиль успешно отредактирован!";
-// else echo "Ошибка! Проверьте правильность введённых данных! Вернуться <A HREF="javascript:history.back()" onMouseOver="window.status='назад';return true">назад</A>";
-}
+echo "Профиль успешно изменён!";}
 echo "<b><h2><font color=#01b2f1><p align = left>Редактирование профиля</p></font></h2></b>";
 echo "
 <form name='newsadd' method='post' enctype='multipart/form-data'>

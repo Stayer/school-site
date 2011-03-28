@@ -12,7 +12,7 @@ if (isset($result[site])) echo "<br>Сайт: $result[site]";
 ?>
 </ol>
 </td>
-<td><p align=right><a href=<? echo $site_url ?>images/profiles/<? echo $result[image] ?> onclick="return hs.expand(this)"><img src=<? echo $site_url ?>images/profiles/<? echo $result[image] ?> width=189 height=272></a> </p></td></tr></table>
+<td><p align=right><a href=<? echo $site_url ?>images/profiles/<? echo $result[image] ?> onclick="return hs.expand(this)"><img src=<? echo $site_url ?>images/profiles/<? echo $result[image] ?> width=80% height=80%></a> </p></td></tr></table>
 <table width=95%>
 <tr width=100%><td>
 <br>О себе: <?=$result[about] ?>
