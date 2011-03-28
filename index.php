@@ -4,7 +4,7 @@
 	include "templates/$site_template/top.php";
 
 	if($_GET['s']=="send")include "sendpass.php";
-	elseif($_GET['s']=="register")include "register.php";
+	elseif($_GET['s']=="register"&&!$cp_login)include "register.php";
 	elseif($_GET['s']=="teacher")include "teachers.php";
 	elseif($_GET['s']=="pupil")include "pupils.php";
 	elseif($_GET['s']=="news")include "news.php";

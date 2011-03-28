@@ -39,10 +39,10 @@ echo'
 		</li>
 		</ul>
 	</li>
-	<li><span><a href="?s=photos">Галерея</a></span></li>
-	<li><span><a href="?s=login">Войти</a></span></li>
-</ul>
-</div>';
-                      ?>
-   <td width="2%" rowspan="2"></td>
+	<li><span><a href="?s=photos">Галерея</a></span></li>';
+if (!$cp_login) echo'<hr><li><span><a href="?s=register"><font color=red>Регистрация</font></a></span></li>
+	<li><span><a href="?s=login">Войти</a></span></li>';
+echo '</ul></div>';
+?>
+<td width="2%" rowspan="2"></td>
 <tr><td class="button" id="b14a" valign="top"></td></tr>	
